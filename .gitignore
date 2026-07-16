@@ -1,0 +1,30 @@
+# Data (regenerate via scripts/download_domains.py + scripts/preprocess.py)
+data/
+
+# Model outputs / checkpoints / logs
+outputs/
+slurm_logs/
+logs/
+*.pt
+*.onnx
+
+# Large binary / array formats
+*.zarr
+*.nc
+*.npy
+
+# Evaluation result JSONs
+eval_*.json
+results_*.json
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+
+# Editor / OS
+.DS_Store
+*.swp
+*.swo
