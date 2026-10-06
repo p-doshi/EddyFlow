@@ -33,3 +33,17 @@ ablation counterparts) loads checkpoints from this list.
 
 Note: no `5b` checkpoint exists. Stage 6 in the paper corresponds to code
 stage `5a`.
+
+Stage 1 (full joint spatiotemporal self-attention, block-causal mask, no
+dual-stream or physics-motivated structure) is the architecture used as the
+paper's external baseline comparison point, standing in for a CorrDiff-style
+coarse-to-fine diffusion approach where a from-scratch reimplementation of
+published external methods was not feasible within this evaluation cycle.
+
+### Verification tier
+
+BOF/GOM entries above are cross-checked against the `checkpoint` field each
+`evaluate_v2.py` run records directly in its output JSON. `evaluate.py`
+(stages 1-3's GSL runs) does not record this field, so GSL entries for
+those stages are matched by filename convention rather than a recorded
+field — a lower verification tier than BOF/GOM.
